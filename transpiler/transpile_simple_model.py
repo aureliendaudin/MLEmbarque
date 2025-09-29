@@ -1,9 +1,3 @@
-#!/usr/bin/env python3
-"""
-Transpileur universel pour modèles ML vers code C
-Supporte: régression linéaire, régression logistique, arbres de décision
-"""
-
 import joblib
 import numpy as np
 import argparse
