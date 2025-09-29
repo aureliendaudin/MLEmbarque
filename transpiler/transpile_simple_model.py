@@ -298,10 +298,10 @@ def main():
         formatter_class=argparse.RawDescriptionHelpFormatter,
         epilog="""
 Exemples d'utilisation:
-  python transpiler.py model.joblib linear_regression
-  python transpiler.py model.joblib logistic_regression -o output.c
-  python transpiler.py tree.joblib decision_tree --compile
-  python transpiler.py model.joblib linear_regression --test-data 1.5,2.0,3.0
+  python transpiler_simple_model.py model.joblib linear_regression
+  python transpiler_simple_model.py model.joblib logistic_regression -o output.c
+  python transpiler_simple_model.py tree.joblib decision_tree --compile
+  python transpiler_simple_model.py model.joblib linear_regression --test-data 1.5,2.0,3.0
         """
     )
 

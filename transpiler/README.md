@@ -43,7 +43,7 @@ brew install gcc          # macOS
 ### Interface en ligne de commande
 
 ```bash
-python transpiler.py <model_path> <model_type> [options]
+python transpiler_simple_model.py <model_path> <model_type> [options]
 ```
 
 #### Arguments obligatoires
@@ -60,23 +60,23 @@ python transpiler.py <model_path> <model_type> [options]
 #### 1. Régression linéaire simple
 ```bash
 # Transpiler seulement
-python transpiler.py linear_regression.joblib linear_regression
+python transpiler_simple_model.py linear_regression.joblib linear_regression
 
 # Transpiler avec compilation automatique
-python transpiler.py linear_regression.joblib linear_regression --compile
+python transpiler_simple_model.py linear_regression.joblib linear_regression --compile
 
 # Avec données de test personnalisées
-python transpiler.py linear_regression.joblib linear_regression --test-data 120.5,3,1
+python transpiler_simple_model.py linear_regression.joblib linear_regression --test-data 120.5,3,1
 ```
 
 #### 2. Régression logistique
 ```bash
-python transpiler.py logistic_model.joblib logistic_regression -o classifier.c --compile
+python transpiler_simple_model.py logistic_model.joblib logistic_regression -o classifier.c --compile
 ```
 
 #### 3. Arbre de décision
 ```bash
-python transpiler.py tree_model.joblib decision_tree --test-data 1.5,-0.5,2.1 --compile
+python transpiler_simple_model.py tree_model.joblib decision_tree --test-data 1.5,-0.5,2.1 --compile
 ```
 
 ## Workflow complet
@@ -105,7 +105,7 @@ joblib.dump(model, "my_model.joblib")
 ### 2. Transpiler vers C
 
 ```bash
-python transpiler.py my_model.joblib linear_regression --compile
+python transpiler_simple_model.py my_model.joblib linear_regression --compile
 ```
 
 ### 3. Utiliser le code C
